@@ -11,14 +11,12 @@ enum UserPage: String, Identifiable {
 }
 
 class UserFlowCoordinator: BaseCoordinator {
-
-    @Published var path: NavigationPath
     
     @Published var page: UserPage
 
     init(path: NavigationPath, page: UserPage) {
-        self.path = path
         self.page = page
+        super.init(path: path)
     }
 
     @ViewBuilder

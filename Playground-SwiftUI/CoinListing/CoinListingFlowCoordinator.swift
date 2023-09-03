@@ -11,13 +11,11 @@ enum CoinListingPage: String, Identifiable {
 }
 
 class CoinListingFlowCoordinator: BaseCoordinator {
-    @Published var path: NavigationPath
-    
     @Published private var page: CoinListingPage
 
     init(path: NavigationPath, page: CoinListingPage) {
-        self.path = path
         self.page = page
+        super.init(path: path)
     }
     
     @ViewBuilder
@@ -27,7 +25,7 @@ class CoinListingFlowCoordinator: BaseCoordinator {
             coinListingView()
 
         case .detail:
-            getCoinDetailCoordinator().build()
+            CoinDetailCoordinator(path: path).build()
         }
     }
 
@@ -37,7 +35,7 @@ class CoinListingFlowCoordinator: BaseCoordinator {
         view.coinDidTap
             .sink(receiveValue: { [weak self] coin in
                 guard let self = self else { return }
-                path.append(getCoinDetailCoordinator())
+                path.append(CoinDetailCoordinator(path: path))
             })
             .store(in: &cancellables)
         
