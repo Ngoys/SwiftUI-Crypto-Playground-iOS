@@ -12,7 +12,7 @@ enum UserPage: String, Identifiable {
 
 class UserFlowCoordinator: BaseCoordinator {
     
-    @Published var page: UserPage
+    @State var page: UserPage
 
     init(path: NavigationPath, page: UserPage) {
         self.page = page

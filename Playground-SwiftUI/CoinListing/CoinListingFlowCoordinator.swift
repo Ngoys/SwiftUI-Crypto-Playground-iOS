@@ -11,7 +11,8 @@ enum CoinListingPage: String, Identifiable {
 }
 
 class CoinListingFlowCoordinator: BaseCoordinator {
-    @Published private var page: CoinListingPage
+    
+    @State private var page: CoinListingPage
 
     init(path: NavigationPath, page: CoinListingPage) {
         self.page = page
@@ -32,7 +33,7 @@ class CoinListingFlowCoordinator: BaseCoordinator {
     private func coinListingView() -> some View {
         let view = CoinListingView(viewModel: CoinListingViewModel(coinStore: CoinStore(socketAPIClient: CoinSocketAPIClient())))
 
-        view.coinDidTap
+        view.coinDidTapSubject
             .sink(receiveValue: { [weak self] coin in
                 guard let self = self else { return }
                 path.append(CoinDetailCoordinator(path: path))

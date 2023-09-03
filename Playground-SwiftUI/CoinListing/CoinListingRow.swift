@@ -4,7 +4,7 @@ import SwiftUI
 
 struct CoinListingRow: View {
     
-    @ObservedObject var viewModel: CoinListingRowViewModel
+    @StateObject var viewModel: CoinListingRowViewModel
     
     var buttonDidTap: () -> Void
 

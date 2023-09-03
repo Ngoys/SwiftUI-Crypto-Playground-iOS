@@ -19,15 +19,15 @@ class CoinSocketAPIClient: NSObject, SocketAPIClient {
         operation: Operation,
         arguments: [String],
         requiresAuthorization: Bool = false) -> AnyPublisher<Data, Error> {
-            let dataSubject = PassthroughSubject<Data, Error>()
+            let emitValueSubject = PassthroughSubject<Data, Error>()
 
             let socketCommand = SocketCommand(operation: operation, arguments: arguments)
             let id = socketCommand.arguments.joined(separator: "")
 
             guard let data = try? JSONEncoder().encode(socketCommand),
                   let jsonString = String(data: data, encoding: .utf8) else {
-                dataSubject.send(completion: .failure(AppError.badRequest))
-                return dataSubject.eraseToAnyPublisher()
+                emitValueSubject.send(completion: .failure(AppError.badRequest))
+                return emitValueSubject.eraseToAnyPublisher()
             }
 
             let webSocketTask: URLSessionWebSocketTask?
@@ -46,7 +46,7 @@ class CoinSocketAPIClient: NSObject, SocketAPIClient {
             webSocketTask?.send(.string(jsonString)) { error in
                 if let error = error {
                     print("WebSocket sending error: \(error)")
-                    dataSubject.send(completion: .failure(error))
+                    emitValueSubject.send(completion: .failure(error))
                 }
             }
 
@@ -55,21 +55,21 @@ class CoinSocketAPIClient: NSObject, SocketAPIClient {
                     switch result {
                     case .failure(let error):
                         print("Failed to receive message: \(error)")
-                        dataSubject.send(completion: .failure(error))
+                        emitValueSubject.send(completion: .failure(error))
 
                     case .success(let message):
                         switch message {
                         case .string(let text):
                             print("Received text message: \(text)")
                             guard let data = text.data(using: .utf8) else {
-                                dataSubject.send(completion: .failure(AppError.invalidData))
+                                emitValueSubject.send(completion: .failure(AppError.invalidData))
                                 return
                             }
-                            dataSubject.send(data)
+                            emitValueSubject.send(data)
 
                         case .data(let data):
                             print("Received binary message: \(data)")
-                            dataSubject.send(data)
+                            emitValueSubject.send(data)
 
                         default:
                             break
@@ -81,7 +81,7 @@ class CoinSocketAPIClient: NSObject, SocketAPIClient {
 
             receiveMessage()
 
-            return dataSubject.eraseToAnyPublisher()
+            return emitValueSubject.eraseToAnyPublisher()
         }
 
     //----------------------------------------

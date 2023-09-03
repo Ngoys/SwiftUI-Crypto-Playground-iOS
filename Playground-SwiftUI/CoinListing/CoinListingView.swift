@@ -16,7 +16,7 @@ struct CoinListingView: View {
 
     @State private var cancellables = Set<AnyCancellable>()
 
-    let coinDidTap = PassthroughSubject<Coin, Never>()
+    let coinDidTapSubject = PassthroughSubject<Coin, Never>()
 
     @ViewBuilder
     var body: some View {
@@ -84,10 +84,10 @@ struct CoinListingView: View {
             List(coins) { coin in
                 let viewModel = CoinListingRowViewModel(coin: coin)
                 CoinListingRow(viewModel: viewModel) {
-                    coinDidTap.send(coin)
+                    coinDidTapSubject.send(coin)
                     print("coinDidTap")
 
-//                    self.viewModel.addCoins()
+                    self.viewModel.addCoins()
                 }
             }
 
