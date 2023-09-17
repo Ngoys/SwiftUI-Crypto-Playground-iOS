@@ -23,7 +23,7 @@ class UserFlowCoordinator: BaseCoordinator {
     func build() -> some View {
         switch self.page {
         case .main:
-            Text("meow")
+            Text("Hello World")
         }
     }
 }

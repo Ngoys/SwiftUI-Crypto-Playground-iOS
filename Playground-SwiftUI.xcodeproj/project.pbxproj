@@ -78,6 +78,94 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C263F0A02AB7095400361C5A /* CoinDetail */ = {
+			isa = PBXGroup;
+			children = (
+				C264D41E2AA439CF00281A2E /* CoinDetailCoordinator.swift */,
+				C2E2173E2AA42B0100E69F74 /* CoinDetailView.swift */,
+			);
+			path = CoinDetail;
+			sourceTree = "<group>";
+		};
+		C263F0A12AB7095B00361C5A /* User */ = {
+			isa = PBXGroup;
+			children = (
+				C2E217382AA41AC900E69F74 /* UserFlowCoordinator.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		C263F0A22AB7096700361C5A /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C2E2173C2AA41B3400E69F74 /* BaseCoordinator.swift */,
+				C26627152AA2D46900F4E3F2 /* BaseStore.swift */,
+				C26627072AA2B61E00F4E3F2 /* BaseViewModel.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		C263F0A32AB7097C00361C5A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C266270F2AA2D2EB00F4E3F2 /* SocketAPIClient.swift */,
+				C266271B2AA2D7C000F4E3F2 /* CoinSocketAPIClient.swift */,
+				C263F0A62AB709C700361C5A /* Store */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C263F0A42AB7098100361C5A /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				C26627112AA2D30A00F4E3F2 /* APIResponse.swift */,
+				C266271D2AA2DC0700F4E3F2 /* AppError.swift */,
+				C26627052AA2B5A200F4E3F2 /* CoinSocketAPIJSON.swift */,
+				C2E217302AA330CE00E69F74 /* Operation.swift */,
+				C266271F2AA2E20400F4E3F2 /* SocketCommand.swift */,
+				C26627192AA2D76C00F4E3F2 /* Coin.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		C263F0A52AB709A900361C5A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				C26627172AA2D48300F4E3F2 /* AppConstant.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		C263F0A62AB709C700361C5A /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				C26627132AA2D41800F4E3F2 /* CoinStore.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		C263F0A72AB709D800361C5A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C237378E2AB7075F0060641C /* AppCoordinator.swift */,
+				C2E217362AA41AA400E69F74 /* MainView.swift */,
+				C263F0A22AB7096700361C5A /* Base */,
+				C264D4202AA448BE00281A2E /* CoinListing */,
+				C263F0A12AB7095B00361C5A /* User */,
+				C263F0A02AB7095400361C5A /* CoinDetail */,
+				C263F0A82AB709E100361C5A /* Shared */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		C263F0A82AB709E100361C5A /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				C26627032AA2B58C00F4E3F2 /* StatefulViewModel.swift */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
 		C264D4202AA448BE00281A2E /* CoinListing */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,27 +198,11 @@
 			isa = PBXGroup;
 			children = (
 				C26626F32AA2B55000F4E3F2 /* Playground_SwiftUIApp.swift */,
-				C237378E2AB7075F0060641C /* AppCoordinator.swift */,
-				C2E217362AA41AA400E69F74 /* MainView.swift */,
-				C264D4202AA448BE00281A2E /* CoinListing */,
-				C2E217382AA41AC900E69F74 /* UserFlowCoordinator.swift */,
-				C264D41E2AA439CF00281A2E /* CoinDetailCoordinator.swift */,
-				C2E2173E2AA42B0100E69F74 /* CoinDetailView.swift */,
-				C26627032AA2B58C00F4E3F2 /* StatefulViewModel.swift */,
-				C26627072AA2B61E00F4E3F2 /* BaseViewModel.swift */,
-				C2E2173C2AA41B3400E69F74 /* BaseCoordinator.swift */,
-				C26627132AA2D41800F4E3F2 /* CoinStore.swift */,
-				C26627152AA2D46900F4E3F2 /* BaseStore.swift */,
-				C266270F2AA2D2EB00F4E3F2 /* SocketAPIClient.swift */,
-				C266271B2AA2D7C000F4E3F2 /* CoinSocketAPIClient.swift */,
-				C2E217302AA330CE00E69F74 /* Operation.swift */,
-				C26627172AA2D48300F4E3F2 /* AppConstant.swift */,
-				C26627112AA2D30A00F4E3F2 /* APIResponse.swift */,
-				C266271D2AA2DC0700F4E3F2 /* AppError.swift */,
+				C263F0A72AB709D800361C5A /* UI */,
+				C263F0A32AB7097C00361C5A /* Services */,
+				C263F0A42AB7098100361C5A /* Modal */,
+				C263F0A52AB709A900361C5A /* Utilities */,
 				C26626F72AA2B55100F4E3F2 /* Assets.xcassets */,
-				C26627052AA2B5A200F4E3F2 /* CoinSocketAPIJSON.swift */,
-				C266271F2AA2E20400F4E3F2 /* SocketCommand.swift */,
-				C26627192AA2D76C00F4E3F2 /* Coin.swift */,
 				C26626F92AA2B55100F4E3F2 /* Preview Content */,
 			);
 			path = "Playground-SwiftUI";

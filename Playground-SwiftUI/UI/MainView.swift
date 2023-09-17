@@ -8,13 +8,6 @@ struct MainView: View {
 
     var body: some View {
         TabView {
-            NavigationStack(path: $usersFlowCoordinator.path) {
-                usersFlowCoordinator.build()
-            }
-            .tabItem {
-                Label("Order", systemImage: "square.and.pencil")
-            }
-
             NavigationStack(path: $coinListingFlowCoordinator.path) {
                 coinListingFlowCoordinator.build()
                     .navigationDestination(for: CoinDetailCoordinator.self) { coordinator in
@@ -22,7 +15,14 @@ struct MainView: View {
                     }
             }
             .tabItem {
-                Label("Menu", systemImage: "list.dash")
+                Label("Coins", systemImage: "list.dash")
+            }
+
+            NavigationStack(path: $usersFlowCoordinator.path) {
+                usersFlowCoordinator.build()
+            }
+            .tabItem {
+                Label("Profile", systemImage: "square.and.pencil")
             }
         }
     }
