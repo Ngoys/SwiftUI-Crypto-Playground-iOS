@@ -50,35 +50,35 @@ struct CoinListingView: View {
 //            }.store(in: &cancellables)
 //        }
 
-//        List(testingTradingCoins) { coin in
-//            Text(verbatim: coin.symbol)
-//        }
-//        .onAppear(perform: {
-//            testingTradingCoins.removeAll()
-//            viewModel.fetchCoins(coinName: "XRPUSD").sink { completion in
-//                switch completion {
-//                case .finished:
-//                    break
-//
-//                case .failure(let error):
-//                    testingTradingCoinsError = error
-//                }
-//            } receiveValue: { data in
-//                testingTradingCoins.append(contentsOf: data)
-//            }.store(in: &cancellables)
-//        })
-//        .onDisappear {
-//            viewModel.unsubcribeFetchCoins(coinName: "XRPUSD").sink { completion in
-//                switch completion {
-//                case .finished:
-//                    break
-//
-//                case .failure(let error):
-//                    tradingCoinsError = error
-//                }
-//            } receiveValue: { _ in
-//            }.store(in: &cancellables)
-//        }
+        List(testingTradingCoins) { coin in
+            Text(verbatim: coin.symbol)
+        }
+        .onAppear(perform: {
+            testingTradingCoins.removeAll()
+            viewModel.fetchCoins(coinName: "XRPUSD").sink { completion in
+                switch completion {
+                case .finished:
+                    break
+
+                case .failure(let error):
+                    testingTradingCoinsError = error
+                }
+            } receiveValue: { data in
+                testingTradingCoins.append(contentsOf: data)
+            }.store(in: &cancellables)
+        })
+        .onDisappear {
+            viewModel.unsubcribeFetchCoins(coinName: "XRPUSD").sink { completion in
+                switch completion {
+                case .finished:
+                    break
+
+                case .failure(let error):
+                    tradingCoinsError = error
+                }
+            } receiveValue: { _ in
+            }.store(in: &cancellables)
+        }
 
         ZStack {
             List(coins) { coin in

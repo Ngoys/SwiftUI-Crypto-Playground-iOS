@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C237378F2AB7075F0060641C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C237378E2AB7075F0060641C /* AppCoordinator.swift */; };
 		C264D41F2AA439CF00281A2E /* CoinDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C264D41E2AA439CF00281A2E /* CoinDetailCoordinator.swift */; };
-		C264D4222AA44CC300281A2E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C264D4212AA44CC300281A2E /* AppCoordinator.swift */; };
 		C26626F42AA2B55000F4E3F2 /* Playground_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26626F32AA2B55000F4E3F2 /* Playground_SwiftUIApp.swift */; };
 		C26626F62AA2B55000F4E3F2 /* CoinListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26626F52AA2B55000F4E3F2 /* CoinListingView.swift */; };
 		C26626F82AA2B55100F4E3F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C26626F72AA2B55100F4E3F2 /* Assets.xcassets */; };
@@ -37,8 +37,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C237378E2AB7075F0060641C /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		C264D41E2AA439CF00281A2E /* CoinDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailCoordinator.swift; sourceTree = "<group>"; };
-		C264D4212AA44CC300281A2E /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppCoordinator.swift; path = ../../../.Trash/AppCoordinator.swift; sourceTree = "<group>"; };
 		C26626F02AA2B55000F4E3F2 /* Playground-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Playground-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C26626F32AA2B55000F4E3F2 /* Playground_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playground_SwiftUIApp.swift; sourceTree = "<group>"; };
 		C26626F52AA2B55000F4E3F2 /* CoinListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinListingView.swift; sourceTree = "<group>"; };
@@ -110,7 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				C26626F32AA2B55000F4E3F2 /* Playground_SwiftUIApp.swift */,
-				C264D4212AA44CC300281A2E /* AppCoordinator.swift */,
+				C237378E2AB7075F0060641C /* AppCoordinator.swift */,
 				C2E217362AA41AA400E69F74 /* MainView.swift */,
 				C264D4202AA448BE00281A2E /* CoinListing */,
 				C2E217382AA41AC900E69F74 /* UserFlowCoordinator.swift */,
@@ -216,7 +216,6 @@
 			files = (
 				C266271C2AA2D7C000F4E3F2 /* CoinSocketAPIClient.swift in Sources */,
 				C26626F62AA2B55000F4E3F2 /* CoinListingView.swift in Sources */,
-				C264D4222AA44CC300281A2E /* AppCoordinator.swift in Sources */,
 				C26626F42AA2B55000F4E3F2 /* Playground_SwiftUIApp.swift in Sources */,
 				C26627162AA2D46900F4E3F2 /* BaseStore.swift in Sources */,
 				C266271E2AA2DC0700F4E3F2 /* AppError.swift in Sources */,
@@ -237,6 +236,7 @@
 				C26627022AA2B56000F4E3F2 /* CoinListingViewModel.swift in Sources */,
 				C26627062AA2B5A200F4E3F2 /* CoinSocketAPIJSON.swift in Sources */,
 				C26627182AA2D48300F4E3F2 /* AppConstant.swift in Sources */,
+				C237378F2AB7075F0060641C /* AppCoordinator.swift in Sources */,
 				C26627082AA2B61E00F4E3F2 /* BaseViewModel.swift in Sources */,
 				C26627102AA2D2EB00F4E3F2 /* SocketAPIClient.swift in Sources */,
 			);
