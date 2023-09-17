@@ -87,12 +87,12 @@ struct CoinListingView: View {
                     coinDidTapSubject.send(coin)
                     print("coinDidTap")
 
-                    self.viewModel.addCoins()
+//                    self.viewModel.addCoins()
                 }
             }
 
             if let coinError = coinError {
-                Text(verbatim: "Error la")
+                Text(verbatim: "Error UI here...")
             }
         }
         .onReceive(viewModel.statePublisher) { state in

@@ -16,7 +16,7 @@ class CoinListingRowViewModel: BaseViewModel {
     //----------------------------------------
 
     var titleText: String {
-        return "coin title is \(self.coin.id)"
+        return "Coin id is \(self.coin.id)"
     }
 
     //----------------------------------------
