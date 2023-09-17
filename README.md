@@ -13,5 +13,5 @@
 ##
 
 This playground project is to demostrate the ability of SwiftUI / MVVM + C / Combine framework / finite state machine code architecture.<br />
-I integrate it with [BitMEX API]([https://www.bitmex.com/app/wsAPI]) with socket connection.<br /><br />
+I integrate it with [BitMEX API](https://www.bitmex.com/app/wsAPI) with socket connection.<br /><br />
 This will be my code template for SwiftUI projects, allowing simple understanding and standardization. 
