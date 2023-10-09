@@ -15,6 +15,6 @@
 This playground project has **MVVM + C / Combine framework / finite state machine** code architecture to integrate [BitMEX API](https://www.bitmex.com/app/wsAPI) with socket connection.
 
 1. SwiftUI
-2. Open/close socket connection for coin's price updates. 
+2. Subcribe/unsubcribe socket connection for coin's price updates. 
 3. Coordinators for potential deeplinks and navigation
 4. Combine-based view model
