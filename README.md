@@ -10,8 +10,11 @@
 2. Open `Playground-SwiftUI.xcodeproj` using `Xcode`, with minimum iOS version of 13.0
 3. You should be on `main` branch
 
-##
+## Feature 
 
-This playground project is to demostrate the ability of SwiftUI / MVVM + C / Combine framework / finite state machine code architecture.<br />
-I integrate it with [BitMEX API](https://www.bitmex.com/app/wsAPI) with socket connection.<br /><br />
-This will be my code template for SwiftUI projects, allowing simple understanding and standardization. 
+This playground project has **MVVM + C / Combine framework / finite state machine** code architecture to integrate [BitMEX API](https://www.bitmex.com/app/wsAPI) with socket connection.
+
+1. SwiftUI
+2. Open/close socket connection for coin's price updates. 
+3. Coordinators for potential deeplinks and navigation
+4. Combine-based view model
