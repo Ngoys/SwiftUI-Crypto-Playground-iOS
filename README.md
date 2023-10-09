@@ -1,7 +1,7 @@
 # SwiftUI Crypto socket connection, by [Shawn Ngo Yen Sern](https://www.linkedin.com/in/ngo-yensern/?originalSubdomain=my)
 
 <img width="350" alt="Screenshot 2023-09-17 at 6 21 51 PM" src="https://github.com/Ngoys/swiftui-playground-ios/assets/6831096/034a8892-e507-4b1e-86f1-125f7cea9621">
-<img width="550" alt="Screenshot 2023-09-17 at 6 19 33 PM" src="https://github.com/Ngoys/swiftui-playground-ios/assets/6831096/09478d2f-4ce5-49eb-a4f1-d8f79f8cbc16">
+<img width="500" alt="Screenshot 2023-09-17 at 6 19 33 PM" src="https://github.com/Ngoys/swiftui-playground-ios/assets/6831096/09478d2f-4ce5-49eb-a4f1-d8f79f8cbc16">
 
 ## Installation
 
